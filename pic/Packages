@@ -1,0 +1,84 @@
+Package: jellyfin
+Version: 10.7.7-1
+Architecture: all
+Maintainer: Jellyfin Packaging Team <packaging@jellyfin.org>
+Installed-Size: 9
+Depends: jellyfin-server, jellyfin-web, jellyfin-ffmpeg (>= 4.2.1-2)
+Multi-Arch: foreign
+Homepage: https://jellyfin.org
+Priority: optional
+Section: misc
+Filename: pool/main/j/jellyfin/jellyfin_10.7.7-1_all.deb
+Size: 2256
+SHA256: 4b1a1e4445110da739bd72af7270d883fe16271a5aec7ee15e47cc1704189a65
+SHA1: 2f875def3aaf06d083366ebe058c92110eb8cd21
+MD5sum: 3549ade0e9cd3be269a48bfdd3fa2692
+Description: Provides the Jellyfin Free Software Media System
+ Provides the full Jellyfin experience, including both the server and web interface.
+
+Package: jellyfin-ffmpeg
+Source: jellyfin-ffmpeg (4.4.1-4)
+Version: 4.4.1-4-bullseye
+Architecture: arm64
+Maintainer: Jellyfin Packaging Team <packaging@jellyfin.org>
+Installed-Size: 42946
+Depends: libass9 (>= 1:0.13.6), libbluray2 (>= 1:0.2.2), libc6 (>= 2.29), libdrm2 (>= 2.4.101), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.2.1), libfribidi0 (>= 0.19.2), libgcc-s1 (>= 3.0), libgmp10, libgnutls30 (>= 3.7.0), libmp3lame0 (>= 3.100), libopus0 (>= 1.1), libstdc++6 (>= 5.2), libtheora0 (>= 1.0), libvdpau1 (>= 0.2), libvorbis0a (>= 1.1.2), libvorbisenc2 (>= 1.1.2), libvpx6 (>= 1.6.0), libwebp6 (>= 0.5.1), libwebpmux3 (>= 0.6.1-2.1), libx11-6, libx264-160 (>= 2:0.160.3011+gitcde9a93), libx265-192 (>= 3.2), libzvbi0 (>= 0.2.35), zlib1g (>= 1:1.2.0.2)
+Multi-Arch: foreign
+Homepage: https://ffmpeg.org/
+Priority: optional
+Section: video
+Filename: pool/main/j/jellyfin-ffmpeg/jellyfin-ffmpeg_4.4.1-4-bullseye_arm64.deb
+Size: 14970656
+SHA256: 2e0260376c10fb9fc8e5a8dd547422fc85971d1d5a9ab974391a70af029a7e89
+SHA1: 979e9c73cb09f2ae40940016788ea12558dd79e1
+MD5sum: 374990512f6ca587285ea3df29b4e9c3
+Description: Tools for transcoding, streaming and playing of multimedia files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This package contains a static build compatible with all Debian/Ubuntu
+ releases, designed to facilitate Jellyfin on systems with a repository ffmpeg
+ version of 4.1 or newer, which we do not yet support. Included files are:
+  * ffmpeg: a command line tool to convert multimedia files between formats
+  * ffplay: a simple media player based on SDL and the FFmpeg libraries
+  * ffprobe: a simple multimedia stream analyzer
+
+Package: jellyfin-server
+Version: 10.7.7-1
+Architecture: arm64
+Maintainer: Jellyfin Team <team@jellyfin.org>
+Installed-Size: 133838
+Depends: at, libsqlite3-0, libfontconfig1, libfreetype6, libssl1.1
+Recommends: jellyfin-web
+Breaks: jellyfin (<< 10.6.0)
+Replaces: jellyfin (<< 10.6.0)
+Homepage: https://jellyfin.org/
+Priority: optional
+Section: misc
+Filename: pool/main/j/jellyfin-server/jellyfin-server_10.7.7-1_arm64.deb
+Size: 33836712
+SHA256: 0c42e615382fa567d8e274e77a65632f878680536eaf2bd77fb13a09dc59ada9
+SHA1: ae2aac2f1e6e5709c5b998cdd2485636e8ec5c89
+MD5sum: 975f6a4adb75763eec52c34f76e09ed1
+Description: Jellyfin is the Free Software Media System.
+ This package provides the Jellyfin server backend and API.
+
+Package: jellyfin-web
+Version: 10.7.7-1
+Architecture: all
+Maintainer: Jellyfin Team <team@jellyfin.org>
+Installed-Size: 48087
+Recommends: jellyfin-server
+Homepage: https://jellyfin.org/
+Priority: optional
+Section: misc
+Filename: pool/main/j/jellyfin-web/jellyfin-web_10.7.7-1_all.deb
+Size: 35035256
+SHA256: ca06cc1be55cb0393de9cd002e5cd422b7746c68341125b8f4c18907c59647c8
+SHA1: ee83b738a6949961c93318fff9c5341a5fd7079d
+MD5sum: 739a909f517f72ae7327e8bf6095d8d4
+Description: Jellyfin is the Free Software Media System.
+ This package provides the Jellyfin web client.
+
